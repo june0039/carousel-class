@@ -11,6 +11,11 @@ for (const $image of $images) {
 
 $images[active].style.display = 'block'
 
+function backward() {
+    $images[active].style.display = 'none'
+    active--
+}
+
 function forward() {
     $images[active].style.display = 'none'
     active++
