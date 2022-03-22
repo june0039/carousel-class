@@ -1,1 +1,21 @@
+.carousel {
+    border: 4px solid;
+    width: 1000px;
+    height: 100%;
+
+}
+
+.carsouel_images{
+    width: 100%;
+    height: 100%;
+
+}
+
+.carousel_images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
