@@ -2,7 +2,7 @@ const $images = document.querySelector('.carousel_images').children
 const $leftBtn = document.querySelector('.carousel_left')
 const $rightBtn = document.querySelector('.carpusel_right')
 
-let active = 0;
+let active = 0
 
 for (const $image of $images) {
     $image.style.display = 'none'
@@ -14,7 +14,16 @@ $images[active].style.display = 'block'
 function backward() {
     $images[active].style.display = 'none'
     active--
+
+    if (active >= $images.length) active = 0
+    
+    
 }
+
+$leftBtn.addEventListener('click', function () {
+    
+    backward()
+})
 
 function forward() {
     $images[active].style.display = 'none'
