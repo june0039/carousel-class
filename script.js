@@ -15,7 +15,8 @@ function backward() {
     $images[active].style.display = 'none'
     active--
 
-    if (active >= $images.length) active = 0
+    if ([active] == undefined) active = $images.length - 1
+    $images[active].style.display = 'block'
     
     
 }
@@ -32,9 +33,12 @@ function forward() {
     if (active >= $images.length) active = 0
     
     $images[active].style.display = 'block'
-    console.log(active)
+    
 }
 
 $rightBtn.addEventListener('click', function () {
-    forward()
+
+   forward()
 })
+
+setInterval(forward, 4000)
