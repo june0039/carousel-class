@@ -1,9 +1,6 @@
-const $images = document.querySelector(
-    '.carousel_images').children
-const $leftBtn = document.querySelector(
-    '.carousel_left')
-const $rightBtn = document.querySelector(
-    '.carpusel_right')
+const $images = document.querySelector('.carousel_images').children
+const $leftBtn = document.querySelector('.carousel_left')
+const $rightBtn = document.querySelector('.carpusel_right')
 
 let active = 0
 
@@ -12,7 +9,7 @@ let active = 0
 
 //}
 
-$images[active].classList.add= ('carousel--show')
+$images[active].classList.add('carousel--show')
 
 function backward() {
     $images[active].classList.remove = 'none'
