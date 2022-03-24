@@ -1,5 +1,7 @@
+
+
 .carousel {
-    border: 4px solid;
+
     position:relative;
 
 }
@@ -14,8 +16,7 @@
 .carousel_images img{
 
     position:absolute;
-    width: 100%;
-    height: 100%;
+
     object-fit: cover;
     opacity: 0;
 
