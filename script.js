@@ -6,6 +6,9 @@ const $pipsWrapper = document.querySelector('.carousel_pips')
 
 
 let active = 0
+let timer 
+
+const interval = 5
 
 for (let i = 0; i < $images.length; i++) {
 
@@ -16,64 +19,50 @@ for (let i = 0; i < $images.length; i++) {
 
 }
 
-const $pips = document.querySelector.('.carousel_pips').children
+const $pips = document.querySelector('.carousel_pips').children
 
 
 $images[active].classList.add('carousel--show')
+$pips[active].classList.add('carousel--active')
+
+function jumpTo(_newIndex) {
+   
+  $pips[active].classList.remove('carousel--active')
+  $pips[active].classList.remove('carousel--active')
+    
+    active = _newIndex
+
+    if (active < 0) active = $images.length - 1
+    else if (active >= $images.length) active = 0
+   
+    $images[active].classList.add('carousel--show')
+    $pips[active].classList.add('carousel--active')
+
+     clearInterval(timer)
+     timer = setInterval(forward, interval * 1000)
+
+    }
+
 
 $pipsWrapper.addEventListener('click', function (e)
 {
     if (e.target.classList.contains('carousel_pip')) {
-        $images[active].classList.remove('carousel--show')
-        
-        active = e.target.dataset.index
 
-        $images[active].classList.add('carousel--show')
-        $pips[active].classList.add('carousel--active')
-
-
-        clearInterval(timer)
-        timer = setInterval(forward, 400)
-        
+        jumpTo(e.target.dataset.index)
+ 
     }
     
 })
 
-function backward() {
-
-    $images[active].classList.remove('carousel--show')
-    active--
-
-    if ([active] == undefined) active = $images.length - 1
-    $images[active].classList.add('carousel--show')
-    
-     clearInterval(timer)
-     timer = setInterval(forward, 400)
-    
-}
 
 $leftBtn.addEventListener('click', function () {
     
-    backward()
+    jumpTo()
 })
-
-function forward() {
-
-    $images[active].classList.remove('carousel--show')
-    active++
-
-    if (active >= $images.length) active = 0
-    
-    $images[active].classList.add('carousel--show')
-
-     clearInterval(timer)
-     timer = setInterval(forward, 400)
-    
-}
 
 $rightBtn.addEventListener('click', function () {
 
-   forward()
+   jumpTo()
 })
-
-setInterval(forward, 4000)
+timer = setInterval(jumpTo, intrval *1000) 
+    
