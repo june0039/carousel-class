@@ -12,11 +12,12 @@ let active = 0
 $images[active].classList.add('carousel--show')
 
 function backward() {
-    $images[active].classList.remove = 'none'
+
+    $images[active].classList.remove('carousel--show')
     active--
 
     if ([active] == undefined) active = $images.length - 1
-    $images[active].style.display = 'block'
+    $images[active].classList.add('carousel--show')
     
     
 }
@@ -27,12 +28,13 @@ $leftBtn.addEventListener('click', function () {
 })
 
 function forward() {
-    $images[active].style.display = 'none'
+
+    $images[active].classList.remove('carousel--show')
     active++
 
     if (active >= $images.length) active = 0
     
-    $images[active].style.display = 'block'
+    $images[active].classList.add('carousel--show')
     
 }
 
