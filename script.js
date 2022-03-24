@@ -2,7 +2,7 @@ const $images = document.querySelector('.carousel_images').children
 const $leftBtn = document.querySelector('.carousel_left')
 const $rightBtn = document.querySelector('.carpusel_right')
 
-const $pipsWrapper = document.querySelector('carousel_pips')
+const $pipsWrapper = document.querySelector('.carousel_pips')
 
 
 let active = 0
