@@ -61,3 +61,22 @@ img.carousel--show{
     display:block;
 
 }
+
+.carousel_pips{
+
+    position: absolute;
+    bottom: 15px;
+    z-index: 1;
+
+    width:100%;
+
+    display:grid;
+    
+
+}
+
+.carousel_pip{
+
+    width: 28px;
+    height: 20px;
+}

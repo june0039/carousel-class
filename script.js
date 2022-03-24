@@ -2,12 +2,16 @@ const $images = document.querySelector('.carousel_images').children
 const $leftBtn = document.querySelector('.carousel_left')
 const $rightBtn = document.querySelector('.carpusel_right')
 
+const $pipsWrapper = document.querySelector('carousel_pips')
+
 let active = 0
 
-//for (const $image of $images) {
-  //  $image.style.display = 'none'
+for (const $image of $images) {
+    let $pip = document.createElement('button')
+    $pipsWrapper.appendChild($pip)
+    $pip.classList.add
 
-//}
+}
 
 $images[active].classList.add('carousel--show')
 
