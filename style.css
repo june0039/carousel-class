@@ -62,7 +62,7 @@ img.carousel--show{
 
 }
 
-.carousel_pips{
+.carousel_pips {
 
     position: absolute;
     bottom: 15px;
@@ -71,12 +71,31 @@ img.carousel--show{
     width:100%;
 
     display:grid;
-    
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-gap: 15px;
 
-}
+    }
 
-.carousel_pip{
+.carousel_pip {
 
     width: 28px;
     height: 20px;
+
+    border: solid 3px rgb(284, 204, 204);
+    background:rgba(255, 255, 255, 0.4);
+
+    border-radius: 10px;
+    cursor:pointer;
+
+    transition: border-color 0.2s, background-color 0.2s;
+
+
+}
+
+.carousel--active{
+
+    border: white;
+    background: black;
+
 }
